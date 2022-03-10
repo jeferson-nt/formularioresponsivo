@@ -1,0 +1,139 @@
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.main-login {
+  width: 100vw; /*vh= largura total da tela*/
+  height: 100%;
+  background: gray;
+  display: flex;
+  justify-content: center; /* centraliza as coisas no eixo x (horizontal) */
+  align-items: center; /* centraliza as coisas no eixo y (vertical) */
+}
+
+.left-login {
+  width: 50vw; /*vh= largura total da tela*/
+  height: 100%;
+  display: flex;
+  justify-content: center; /* centraliza as coisas no eixo x (horizontal) */
+  align-items: center; /* centraliza as coisas no eixo y (vertical) */
+  flex-direction: column;
+}
+
+.left-login>h1 {
+  font-size: 3vw;
+  color: black;
+}
+
+.left-login-image {
+  max-width: 600px;
+}
+
+.right-login {
+  width: 50vw; /*vh= largura total da tela*/
+  height: 100%;
+  display: flex;
+  justify-content: center; /* centraliza as coisas no eixo x (horizontal)*/
+  align-items: center; /* centraliza as coisas no eixo y (vertical) */
+}
+
+.card-login {
+  width: 60%; /* Pega o % div da card-login (right-login) que tem 50vh*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 35px;
+  background: rgba(3, 3, 3, 0.103);
+  border-radius: 20px;
+  box-shadow: 0px 15px 40px #00000090;
+}
+
+.card-login>h1 {
+  color: black;
+  font-weight: 800; /* Seria para deixar a letra mais espessa ( bold )*/
+  margin: 0px;
+}
+
+.textfield{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.textfield>input{
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px; /* altura interna da caixa sobre o texto */
+  background:burlywood ;
+  color: white;
+  font-size: 12pt;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.textfield>label {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.textfield>input::placeholder {
+  color: black;
+}
+.btn-login {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border: radius 10px;;
+  outline: none;
+  text-transform: uppercase; /* transforma todo texto em maiusculo */
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: black;
+  background: burlywood;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px -12px black;
+}
+
+@media only screen and (max-width: 950px){
+  .card-login{
+    width:85%;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .main-login {
+    flex-direction: column;
+  }
+  .left-login>h1 {
+    display: none;
+  }
+  .left-login{
+    width: 100%;
+    height: auto;
+  }
+  .right-login{
+    width: 100%;
+    height: auto;
+  }
+  .left-login-image {
+    margin-bottom: 20px;
+    width: 350px;
+  }
+  .card-login{
+    width: 90%;
+  }
+}
+
